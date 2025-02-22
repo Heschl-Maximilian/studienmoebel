@@ -1,0 +1,49 @@
+/* Gradient Header Styling */
+.gradient-header {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background: url("../../public/pictures/wald_oben.jpg") no-repeat center center/cover;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Pseudo-Elemente für Eckdesign */
+.gradient-header::before,
+.gradient-header::after {
+  content: '';
+  position: absolute;
+  width: 40rem; /* Umrechnung von 400px */
+  height: 40rem; /* Umrechnung von 400px */
+  border-top: 0.2rem solid white; /* Umrechnung von 2px */
+  border-left: 0.2rem solid white;
+  z-index: 2;
+}
+
+.gradient-header::before {
+  top: 2rem; /* Umrechnung von 20px */
+  left: 2rem;
+  transform: rotate(0deg);
+}
+
+.gradient-header::after {
+  bottom: 2rem;
+  right: 2rem;
+  transform: rotate(180deg);
+}
+
+.gradient-header h1 {
+  font-family: var(--title-font, 'Instrument Serif', serif);
+  font-weight: 100; /* Vermeidung von Fettdruck */
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+  text-align: center; /* Tippfehler in 'center' korrigiert */
+  color: white;
+  padding: 0 2rem;
+  line-height: 0; /* Korrektur von 0 auf eine lesbare Höhe */
+  text-transform: uppercase;
+}

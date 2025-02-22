@@ -1,0 +1,70 @@
+/* Reset default margins/paddings and set box-sizing */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-size: 10px; /* Basisgröße für rem */
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Define Global Variables */
+:root {
+  --title-font: 'Instrument Serif', serif;
+}
+
+/* Global Font Settings */
+body {
+  font-family: 'Chilanka', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 4rem; /* Anpassung an Basisgröße */
+  font-weight: normal;
+}
+
+/* Main Container */
+.container-main {
+  background-color: #e0ddd7;
+  width: 100vw;
+  margin-left: 3rem;
+  margin-top: 7rem;
+  padding: 0;
+}
+
+/* Section Styling */
+section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Image Styling */
+img {
+  border-radius: 1rem;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Example Transition Element */
+.gradient-transition {
+  width: 100%;
+  height: 50rem;
+  background: linear-gradient(#06402b, #e0ddd7);
+  background-size: 100% 100%;
+  transition: background-size 2s ease-out;
+}
+
+.gradient-transition.active {
+  background-size: 0% 100%;
+}
+
+/* Utility class for centered text content */
+.text-content {
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
