@@ -21,3 +21,4 @@ const ImgTextElementLeft = ({ textLeft, imgSrcLeft, textRight, imgSrcRight }) =>
 };
 
 export default ImgTextElementLeft;
+

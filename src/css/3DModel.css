@@ -1,0 +1,10 @@
+.model-container {
+    width: 90vw;  /* 90% der Bildschirmbreite */
+    height: 60rem; /* Angepasste Höhe */
+    margin: 2rem auto; /* Zentriert */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.1rem solid white; /* Weißer Rand ohne Schatten */
+    padding: 1rem; /* Abstand zum Rand */
+}
