@@ -2,14 +2,14 @@ import React from 'react';
 import './css/imgText.css';
 const ImgText = ({ imgSrc, title, description }) => {
   return (
-    <div className="img-text-container">
+    <div className="img-text-container-popup">
       {/* Linkes Bild */}
-      <div className="half-div image-div left">
-        <img className="text-img" src={imgSrc} alt="Bild 1" />
-        <p className="image-text white bottom">{title}</p>
+      <div className="half-div-popup image-div-popup left">
+        <img className="text-img-popup" src={imgSrc} alt="Bild 1" />
+        <p className="image-text-popup white bottom">{title}</p>
       </div>
       {/* Rechter Text */}
-      <div className="text-content">
+      <div className="text-content-popup">
         <p>{description.split('\n').map((line, index) => (
         <React.Fragment key={index}>
           {line}

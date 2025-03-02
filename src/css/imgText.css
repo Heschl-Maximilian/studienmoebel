@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Sans&display=swap');
-.img-text-container {
+.img-text-container-popup {
   display: flex;
   align-items: center;
   justify-content: flex-start; /* Bild bleibt am linken Rand */
-  width: 100%;
+  width: 100vw;
   height: 100vh; /* Volle Höhe des Viewports */
 }
-.half-div {
+.image-div-popup {
+  width: 100%;
+  height: 50vh; /* Volle Höhe */
+  border-radius: 0px !important;
+  object-fit: cover;
+}
+.half-div-popup {
   width: 40%; 
   height: 100vh;
   display: flex;
@@ -14,39 +20,35 @@
   align-items: center;
   position: relative;
 }
-
-.text-img {
+/*Bild*/
+.text-img-popup {
     width: 39vw !important; 
-    height: 39vw !important; 
+    height: 36.525vw !important; 
     object-fit: cover;
+    border-radius: 0.5rem;
+    margin: 0;
 }
-
-.image-text {
-  font-family: 'Funnel Sans';
+/*Text im Bild*/
+.image-text-popup {
+  font-family: var(--title-font, 'Instrument Serif', serif);
   font-style: normal;
+  transform: scaleY(2.5); 
+  transform: scaleX(1.1); 
+  letter-spacing: 0.5rem;
+  color: white;
   position: absolute;
-  font-size: 6rem;
-  font-weight: bold;
+  font-size: 10rem;
+  font-weight: 1 !important;
   text-align: center;
+  vertical-align: calc(middle);
   padding-left: 0rem;
-  padding-bottom: 19.5vw;
   width: 100%;
 }
 
-.img {
-  width: 40vw; /* Bild nimmt 50% der Breite ein */
-  height: 40vw; /* Höhe = Breite für quadratische Form */
-  max-width: 40rem; /* Begrenzung für große Bildschirme */
-  max-height: 40rem;
-  object-fit: cover; /* Verhindert Verzerrung */
-  border-radius: 0.5rem; /* Optionale Abrundung */
-  margin: 0; /* Kein Abstand nach links */
-}
-
-.text-content {
+.text-content-popup {
   font-family: 'Funnel Sans';
   font-weight: 500;
-  width: 50%; /* Restlicher Platz für den Text */
+  width: 52%; /* Restlicher Platz für den Text */
   padding: 2rem;
   display: flex;
   flex-direction: column;

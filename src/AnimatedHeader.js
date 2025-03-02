@@ -12,7 +12,7 @@ const AnimatedHeader = ({ title, subtitle, backgroundImage }) => {
 
     
 
-      {/* Title & Subtitle  */}
+      {/* Title & Absoluter Absturz  */}
       {/* Animated Drop in  */}
 
       <div className="relative text-center text-white p-6 z-2">
@@ -25,7 +25,7 @@ const AnimatedHeader = ({ title, subtitle, backgroundImage }) => {
           {title}
         </motion.h1>
         <motion.p
-          className="text-lg font-sans tracking-widest mt-2"
+          className="text-6xl font-sans tracking-widest mt-2 subtext"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 1.3, ease: "easeOut" }}

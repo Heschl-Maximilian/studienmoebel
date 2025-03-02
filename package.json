@@ -5,6 +5,7 @@
   "dependencies": {
     "@fontsource/montserrat": "^5.1.1",
     "@fontsource/playfair-display": "^5.1.1",
+    "@mediapipe/tasks-vision": "^0.10.21",
     "@react-three/drei": "^9.121.4",
     "@react-three/fiber": "^8.17.14",
     "cra-template": "1.2.0",

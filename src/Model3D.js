@@ -3,7 +3,6 @@ import "./css/3DModel.css";
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 
-// Funktion für das anklickbare Modell
 function ClickableModel(props) {
   const ref = useRef();
   const [clicked, setClicked] = useState(false);
@@ -46,16 +45,13 @@ function Model3D() {
           <ClickableModel model={scene} position={[1.8, -1, -0.5]} />
         </Suspense>
 
-        {/* Kleiner Boden */}
-        <Floor color="#FFFFFF" /> {/* Blau als Beispiel */}
-
         {/* OrbitControls (nur drehen & zoomen) */}
         <OrbitControls 
           minDistance={2} 
           maxDistance={10} 
           enableZoom={true} 
-          enablePan={false}  // Kein Verschieben
-          maxPolarAngle={Math.PI / 2.2}  // Kein Blick unter Boden
+          enablePan={false}
+          maxPolarAngle={Math.PI / 2.2}
         />
       </Canvas>
     </div>

@@ -1,19 +1,32 @@
-import React from 'react';
-import "./css/ImgTextElementLeft.css"; // Importiere das neue Stylesheet
+import React from "react";
+import "./css/ImgTextElementRight.css";
 
-const ImgTextElementLeft = ({ textLeft, imgSrcLeft, textRight, imgSrcRight }) => {
+const ImgTextElementLeft = ({ 
+  imgSrcLeft, 
+  textMiddleLeft, 
+  textMiddleRight, 
+  imgSrcRight, 
+}) => {
   return (
     <div className="txt-img-container">
-      <div className="half-div image-div">
-        <img src={imgSrcLeft} alt="Bild 1" />
+      {/* Linkes Bild mit Text unten */}
+      <div className="half-div image-div right">
+        <img 
+          src={imgSrcLeft} 
+          alt="Bild 1" 
+        />        
       </div>
-      <div className=" text-div text-left">
-        <p>{textLeft}</p>
+
+      {/* Text in der Mitte */}
+      <div className="text-div text-left-low">
+        <p>{textMiddleLeft}</p>
       </div>
       <div className="text-div text-right">
-        <p>{textRight}</p>
+        <p>{textMiddleRight}</p>
       </div>
-      <div className="half-div image-div">
+
+      {/* Rechtes Bild mit Text oben */}
+      <div className="half-div image-div left">
         <img src={imgSrcRight} alt="Bild 2" />
       </div>
     </div>
@@ -21,4 +34,3 @@ const ImgTextElementLeft = ({ textLeft, imgSrcLeft, textRight, imgSrcRight }) =>
 };
 
 export default ImgTextElementLeft;
-
