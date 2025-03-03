@@ -1,4 +1,175 @@
-/* Container für das gesamte Layout */
+@media (max-width: 768px) {
+/* Existing mobile media query */
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+  
+  /* Arrange each mobile group vertically */
+  .mobile-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem; /* Spacing between groups */
+  }
+  
+  /* Style for vertical text on mobile */
+  .mobile-vertical p {
+    writing-mode: vertical-rl;
+    font-size: 2rem;       /* Adjust as needed */
+    letter-spacing: 0.5rem; /* Adjust spacing if desired */
+    margin: 1rem 0;
+  }
+  
+  /* Optionally, adjust image container styling */
+  .txt-img-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Override any fixed heights or margins from desktop styles if needed */
+  .half-div {
+    height: auto;
+    margin: 1rem 0;
+  }
+ /* Container für das gesamte Layout */
+
+/* Halbseitige Aufteilung für Bilder und Text */
+
+/* Stil für die Bildbereiche */
+.image-div img {
+  width: 70%;
+  height: 100vh;
+  border-radius: 1px;
+  object-fit: cover;
+}
+.image-div.left{
+}
+.image-div.right{
+  margin-top: 10vh;
+}
+.image-text {
+  font-weight:1 !important;
+  width: 100%;
+}
+.image-text {
+  font-family: 'Funnel Sans';
+  font-style: normal;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  letter-spacing: 0.6rem;
+
+}
+.image-text.white {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 10rem;
+  transform: scaleY(2.5); 
+  transform: scaleX(1.1); 
+}
+.image-text.bottom {
+  bottom: 1rem;
+  text-align: center;
+}
+
+.image-text.black {
+  color: black;
+}
+.image-text.top {
+  top: 2rem;
+  text-align: left;
+  margin-left: 119rem;
+
+}
+/* Stil für die Textbereiche */
+.text-div {
+  width:20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+/* Text orientation for all left imgTextElements */
+.text-left-high {
+  font-family: var(--title-font, 'Instrument Serif', serif);
+  display: flex;
+  align-items: flex-start; 
+  transform: scaleY(2.5); 
+  transform: scaleX(1.1); 
+  letter-spacing: 0.5rem;
+  font-weight: 100 !important;
+  margin-top: -35rem;
+  margin-right: -7.5%;
+  font-size: 10rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+.text-left-middle {
+  font-family: var(--title-font, 'Instrument Serif', serif);
+  display: flex;
+  align-items: flex-start; 
+  transform: scaleY(2.5); 
+  transform: scaleX(1.1); 
+  letter-spacing: 0.5rem;
+  font-weight: 100 !important;
+  margin-top: -43rem;
+  margin-right: -7.5%;
+  font-size: 10rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+.text-left-low {
+  font-family: var(--title-font, 'Instrument Serif', serif);
+  display: flex;
+  align-items: flex-start; 
+  transform: scaleY(2.5); 
+  transform: scaleX(1.1); 
+  letter-spacing: 0.5rem;
+  font-weight: 1 !important;
+  margin-top: -25rem;
+  margin-right: -7.5%;
+  font-size: 10rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+
+/* Text orientation for all right imgTextElements */
+.text-right {
+  letter-spacing: 1.5rem;
+  margin-bottom: -35rem;
+  margin-left: -7.5%;
+  font-size: 6rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+.text-right-low {
+  letter-spacing: 1.5rem;
+  margin-bottom: -40rem;
+  margin-left: -7.5%;
+  font-size: 6rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+.text-right-high {
+  letter-spacing: 1.5rem;
+  margin-bottom: -15rem;
+  margin-left: -7.5%;
+  font-size: 6rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+}
+@media (min-width: 768px) {
+ /* Container für das gesamte Layout */
 .txt-img-container {
   display: flex;
   align-items: center;
@@ -150,4 +321,6 @@
   writing-mode: vertical-rl;
   text-orientation: mixed;
   transform: rotate(180deg);
+}
+
 }

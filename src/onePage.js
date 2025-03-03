@@ -27,19 +27,11 @@ export default function OnePage() {
             </section>
 
             {/* 3D-Modell */}
-            <section className="model-placeholder">
-                <div className="placeholder-box">
+            <section>
+                <div>
                     <Model3D />
                 </div>
             </section>
-
-            {/* Bauanleitung */}
-            <section className="description">
-                <h2>Bauanleitung</h2>
-                <p>Eine detaillierte Explosionszeichnung zeigt den Aufbau des Möbelstücks.</p>
-                <img src="/pictures/explosionszeichnung.jpg" alt="Explosionszeichnung" />
-            </section>
-
             {/* Materialien 1 */}
             <section className="description">
                 <div className="txt-img-container">

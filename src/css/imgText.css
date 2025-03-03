@@ -1,60 +1,138 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Sans&display=swap');
-.img-text-container-popup {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Bild bleibt am linken Rand */
-  width: 100vw;
-  height: 100vh; /* Volle Höhe des Viewports */
+
+@media (max-width: 768px) {
+  .img-text-container-popup {
+    align-items: center;
+    justify-content: flex-start; /* Bild bleibt am linken Rand */
+    width: 100vw;
+    height: 100vh; /* Volle Höhe des Viewports */
+    overflow: hidden; /* Verhindert overflow der gesamten container */
+  }
+  
+  .image-div-popup {
+    width: 100%;
+    height: 10vh; /* Volle Höhe */
+    border-radius: 0px !important;
+    object-fit: cover;
+  }
+
+  .half-div-popup {
+    width: 100%; 
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  /* Bild */
+  .text-img-popup {
+    margin-top: 3rem;
+    width: 80vw !important; 
+    height: 80vw !important;
+    margin-left: 1.6rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  /* Text im Bild */
+  .image-text-popup {
+    font-family: var(--title-font, 'Instrument Serif', serif);
+    font-style: normal;
+    transform: scaleY(2.5); 
+    transform: scaleX(1.1); 
+    letter-spacing: 0.5rem;
+    margin-top: -20rem;
+    margin-left: -2rem;
+    color: white;
+    position: absolute;
+    font-size: 5rem;
+    font-weight: 1 !important;
+    text-align: center;
+    vertical-align: calc(middle);
+    width: 100%;
+  }
+
+  /* Textbereich mit Scrollbar auf Mobilgeräten */
+  .text-content-popup {
+    font-family: 'Funnel Sans';
+    font-weight: 500;
+    width: 90%; 
+    margin-top: 16rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: left;
+    color: black;
+    
+    max-height: 40vh; /* Begrenzt die Höhe des Textbereichs auf 40% der Bildschirmhöhe */
+    overflow-y: auto; /* Ermöglicht das Scrollen des Textes, wenn er länger ist */
+  }
 }
-.image-div-popup {
-  width: 100%;
-  height: 50vh; /* Volle Höhe */
-  border-radius: 0px !important;
-  object-fit: cover;
-}
-.half-div-popup {
-  width: 40%; 
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-/*Bild*/
-.text-img-popup {
+
+@media (min-width: 768px) {
+  .img-text-container-popup {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Bild bleibt am linken Rand */
+    width: 100vw;
+    height: 100vh; /* Volle Höhe des Viewports */
+  }
+  
+  .image-div-popup {
+    width: 100%;
+    height: 50vh; /* Volle Höhe */
+    border-radius: 0px !important;
+    object-fit: cover;
+  }
+  
+  .half-div-popup {
+    width: 40%; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  /* Bild */
+  .text-img-popup {
     width: 39vw !important; 
     height: 36.525vw !important; 
     object-fit: cover;
     border-radius: 0.5rem;
     margin: 0;
-}
-/*Text im Bild*/
-.image-text-popup {
-  font-family: var(--title-font, 'Instrument Serif', serif);
-  font-style: normal;
-  transform: scaleY(2.5); 
-  transform: scaleX(1.1); 
-  letter-spacing: 0.5rem;
-  color: white;
-  position: absolute;
-  font-size: 10rem;
-  font-weight: 1 !important;
-  text-align: center;
-  vertical-align: calc(middle);
-  padding-left: 0rem;
-  width: 100%;
-}
+  }
 
-.text-content-popup {
-  font-family: 'Funnel Sans';
-  font-weight: 500;
-  width: 52%; /* Restlicher Platz für den Text */
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 2.5rem;
-  text-align: left;
-  color: black;
+  /* Text im Bild */
+  .image-text-popup {
+    font-family: var(--title-font, 'Instrument Serif', serif);
+    font-style: normal;
+    transform: scaleY(2.5); 
+    transform: scaleX(1.1); 
+    letter-spacing: 0.5rem;
+    color: white;
+    position: absolute;
+    font-size: 10rem;
+    font-weight: 1 !important;
+    text-align: center;
+    vertical-align: calc(middle);
+    padding-left: 0rem;
+    width: 100%;
+  }
 
+  /* Textbereich auf Desktop */
+  .text-content-popup {
+    font-family: 'Funnel Sans';
+    font-weight: 500;
+    width: 52%; /* Restlicher Platz für den Text */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2.5rem;
+    text-align: left;
+    color: black;
+  }
 }
