@@ -1,64 +1,91 @@
 @media (max-width: 768px) {
-  /* Wrapper container to hold the image and the vertical text */
   .img-text-container {
     display: flex;
-    align-items: center; /* Aligns the image and text next to each other */
-    justify-content: space-between; /* Space between image and text */
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    height: 100vh; /* Ensure the container takes full viewport height */
+    height: 100vh;
     margin-bottom: 5rem;
     margin-top: 5rem;
-
   }
 
-  /* Image styling: 100vh height, 60% width */
   .img-container {
-    width: 60%; /* Image takes 60% width of the container */
-    height: 100vh; /* Image height is 100vh */
+    width: 60%;
+    height: 100vh;
+    position: relative;
   }
 
   .img-container img {
-    width: 100%; /* Ensure the image takes up full width of the container */
-    height: 100%; /* Ensure the image takes up full height of the container */
-    object-fit: cover; /* Ensures the image scales correctly */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     margin-right: 1rem !important;
   }
 
-  /* Vertical text styling */
+  .text-inside {
+    position: absolute;
+    width: 100%;
+    font-family: 'Funnel Sans';
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    transform: scaleY(2.5); 
+    transform: scaleX(1.1); 
+  }
+
+  .img-container.first .text-inside {
+    bottom: 1rem;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+  }
+
+  .img-container.second .text-inside {
+    top: 1rem;
+    left: 2.5rem;
+    color: black;
+    text-align: left;
+  }
+
   .text-container {
-    width: 30%; /* Text takes the remaining 30% */
-    height: 100vh; /* Text container takes full height */
+    width: 30%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .text-container p {
-    writing-mode: vertical-rl; /* Vertical text orientation */
+    writing-mode: vertical-rl;
     font-weight: bold;
     letter-spacing: 0.1rem;
   }
-  .text-fancy-mobile{
+
+  .text-fancy-mobile {
     font-family: var(--title-font, 'Instrument Serif', serif);
-    transform: scaleY(3); 
-    transform: scaleX(1.1); 
+    transform: scaleY(3);
+    transform: scaleX(1.1);
     letter-spacing: 2rem;
     font-weight: 100 !important;
     font-size: 8rem;
     margin-left: 4rem;
   }
-  .text-fancy-mobile.link{
+
+  .text-fancy-mobile.link {
     margin-bottom: 30rem;
   }
-  .text-fancy-mobile.right{
+
+  .text-fancy-mobile.right {
     margin-bottom: 33rem;
   }
-  .text-fancy-mobile.left{
+
+  .text-fancy-mobile.left {
     margin-bottom: 18rem;
   }
-  .text-minimal-mobile{
+
+  .text-minimal-mobile {
     font-family: 'Funnel Sans';
-    transform: scaleY(3); 
+    transform: scaleY(2.5); 
     transform: scaleX(1.1); 
     transform: rotate(180deg);
     letter-spacing: 2rem;
@@ -66,169 +93,164 @@
     font-size: 5rem;
     margin-left: 8rem;
   }
-  .text-minimal-mobile.link{
+
+  .text-minimal-mobile.link {
     margin-bottom: -35rem;
   }
-  .text-minimal-mobile.right{
+
+  .text-minimal-mobile.right {
     margin-bottom: -24rem;
   }
-  .text-minimal-mobile.left{
+
+  .text-minimal-mobile.left {
     margin-bottom: -30rem;
   }
 }
 
 @media (min-width: 768px) {
- /* Container für das gesamte Layout */
-.txt-img-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  margin-top: 20rem;
-  margin-bottom: 34rem;
-}
+  .txt-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin-top: 20rem;
+    margin-bottom: 34rem;
+  }
 
-/* Halbseitige Aufteilung für Bilder und Text */
-.half-div {
-  width: 30% !important; 
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .half-div {
+    width: 30% !important; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-/* Stil für die Bildbereiche */
-.image-div img {
-  width: 100%;
-  height: 100vh;
-  border-radius: 0px !important;
-  object-fit: cover;
-}
-.image-div.left{
-  margin-top: -10vh;
-}
-.image-div.right{
-  margin-top: 10vh;
-}
-.image-text {
-  position: absolute;
-  font-weight:1 !important;
-  width: 100%;
-}
-.image-text {
-  font-family: 'Funnel Sans';
-  font-style: normal;
-  position: absolute;
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  padding-left: 0rem;
-  width: 100%;
-  letter-spacing: 0.6rem;
+  .image-div img {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0px !important;
+    object-fit: cover;
+  }
+  .image-div.left{
+    margin-top: -10vh;
+  }
+  .image-div.right{
+    margin-top: 10vh;
+  }
+  .image-text {
+    position: absolute;
+    font-weight:1 !important;
+    width: 100%;
+  }
+  .image-text {
+    font-family: 'Funnel Sans';
+    font-style: normal;
+    position: absolute;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 0rem;
+    width: 100%;
+    letter-spacing: 0.6rem;
+  }
+  .image-text.white {
+    color: white;
+    font-size: 4rem;
+    transform: scaleY(2.5); 
+    transform: scaleX(1.1); 
+  }
+  .image-text.bottom {
+    bottom: 1rem;
+    text-align: center;
+  }
 
-}
-.image-text.white {
-  color: white;
-  font-size: 4rem;
-  transform: scaleY(2.5); 
-  transform: scaleX(1.1); 
-}
-.image-text.bottom {
-  bottom: 1rem;
-  text-align: center;
-}
+  .image-text.black {
+    color: black;
+  }
+  .image-text.top {
+    top: 2rem;
+    text-align: left;
+    margin-left: 119rem;
+  }
 
-.image-text.black {
-  color: black;
-}
-.image-text.top {
-  top: 2rem;
-  text-align: left;
-  margin-left: 119rem;
+  .text-div {
+    width:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
 
-}
-/* Stil für die Textbereiche */
-.text-div {
-  width:20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; 
-}
-/* Text orientation for all left imgTextElements */
-.text-left-high {
-  font-family: var(--title-font, 'Instrument Serif', serif);
-  display: flex;
-  align-items: flex-start; 
-  transform: scaleY(2.5); 
-  transform: scaleX(1.1); 
-  letter-spacing: 0.5rem;
-  font-weight: 100 !important;
-  margin-top: -35rem;
-  margin-right: -7.5%;
-  font-size: 10rem;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-}
-.text-left-middle {
-  font-family: var(--title-font, 'Instrument Serif', serif);
-  display: flex;
-  align-items: flex-start; 
-  transform: scaleY(2.5); 
-  transform: scaleX(1.1); 
-  letter-spacing: 0.5rem;
-  font-weight: 100 !important;
-  margin-top: -43rem;
-  margin-right: -7.5%;
-  font-size: 10rem;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-}
-.text-left-low {
-  font-family: var(--title-font, 'Instrument Serif', serif);
-  display: flex;
-  align-items: flex-start; 
-  transform: scaleY(2.5); 
-  transform: scaleX(1.1); 
-  letter-spacing: 0.5rem;
-  font-weight: 1 !important;
-  margin-top: -25rem;
-  margin-right: -7.5%;
-  font-size: 10rem;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-}
+  .text-left-high {
+    font-family: var(--title-font, 'Instrument Serif', serif);
+    display: flex;
+    align-items: flex-start; 
+    transform: scaleY(2.5); 
+    transform: scaleX(1.1); 
+    letter-spacing: 0.5rem;
+    font-weight: 100 !important;
+    margin-top: -35rem;
+    margin-right: -7.5%;
+    font-size: 10rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+  .text-left-middle {
+    font-family: var(--title-font, 'Instrument Serif', serif);
+    display: flex;
+    align-items: flex-start; 
+    transform: scaleY(2.5); 
+    transform: scaleX(1.1); 
+    letter-spacing: 0.5rem;
+    font-weight: 100 !important;
+    margin-top: -43rem;
+    margin-right: -7.5%;
+    font-size: 10rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+  .text-left-low {
+    font-family: var(--title-font, 'Instrument Serif', serif);
+    display: flex;
+    align-items: flex-start; 
+    transform: scaleY(2.5); 
+    transform: scaleX(1.1); 
+    letter-spacing: 0.5rem;
+    font-weight: 1 !important;
+    margin-top: -25rem;
+    margin-right: -7.5%;
+    font-size: 10rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
 
-
-/* Text orientation for all right imgTextElements */
-.text-right {
-  letter-spacing: 1.5rem;
-  margin-bottom: -35rem;
-  margin-left: -7.5%;
-  font-size: 6rem;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-}
-.text-right-low {
-  letter-spacing: 1.5rem;
-  margin-bottom: -40rem;
-  margin-left: -7.5%;
-  font-size: 6rem;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-}
-.text-right-high {
-  letter-spacing: 1.5rem;
-  margin-bottom: -15rem;
-  margin-left: -7.5%;
-  font-size: 6rem;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-}
-
+  .text-right {
+    letter-spacing: 1.5rem;
+    margin-bottom: -35rem;
+    margin-left: -7.5%;
+    font-size: 6rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+  .text-right-low {
+    letter-spacing: 1.5rem;
+    margin-bottom: -40rem;
+    margin-left: -7.5%;
+    font-size: 6rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+  .text-right-high {
+    letter-spacing: 1.5rem;
+    margin-bottom: -15rem;
+    margin-left: -7.5%;
+    font-size: 6rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+  }
 }

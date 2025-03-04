@@ -5,9 +5,11 @@ const ImgElementRightMobileLink = ({ imgSrcUp, textUp, imgSrcDown, textDown, onR
   return (
     <div>
       <div className="img-text-container">
-        {/* Image */}
-        <div className="img-container" onClick={() => window.location.href = "https://www.complex-farben.at/"}>
+        {/* First Image */}
+        <div className="img-container first" onClick={() => window.location.href = "https://www.complex-farben.at/"}>
           <img src={imgSrcUp} alt="Image" />
+          {/* Text inside the first image */}
+          <div className="text-inside">{"HARTWACHS ÖL"}</div>
         </div>
 
         {/* Vertical Text */}
@@ -15,17 +17,22 @@ const ImgElementRightMobileLink = ({ imgSrcUp, textUp, imgSrcDown, textDown, onR
           <p className="text-fancy-mobile link">{textUp}</p>
         </div>
       </div>
+
       <div className="img-text-container">
         {/* Vertical Text */}
         <div className="text-container">
           <p className="text-minimal-mobile link">{textDown}</p>
         </div>
-        {/* Image */}
-        <div className="img-container">
+
+        {/* Second Image */}
+        <div className="img-container second">
           <img src={imgSrcDown} onClick={onRightImageClick} style={{ cursor: "pointer" }} />
+          {/* Text inside the second image */}
+          <div className="text-inside">{"KIEFER"}</div>
         </div>
       </div>
-    </div>    
+    </div>
   );
 };
+
 export default ImgElementRightMobileLink;
