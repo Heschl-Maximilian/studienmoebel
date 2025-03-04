@@ -144,7 +144,7 @@ export default function OnePage() {
                                 textUp="RAUMGESTAlTUNG"
                                 imgSrcUp="./pictures/rendering_sessel.jpg"
                                 textDown="VISUALISIERUNG"
-                                imgSrcDown="./pictures/rendering_sessel.jpg"
+                                imgSrcDown="./pictures/rendering_niesche.jpg"
                            />
                         </div>
                     </section>
