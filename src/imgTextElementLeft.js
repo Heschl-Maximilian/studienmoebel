@@ -27,7 +27,7 @@ const ImgTextElementLeft = ({
 
       {/* Rechtes Bild mit Text oben */}
       <div className="half-div image-div left">
-        <img src={imgSrcRight} alt="Bild 2" />
+        <img src={imgSrcRight} alt="Bild 2"/>
       </div>
     </div>
   );
