@@ -12,13 +12,13 @@ const ImgElementLeftMobile = ({ imgSrcUp, textUp, imgSrcDown, textDown }) => {
 
         {/* Vertical Text */}
         <div className="text-container">
-          <p className="text-fancy-mobile">{textUp}</p>
+          <p className="text-fancy-mobile left">{textUp}</p>
         </div>
       </div>
       <div className="img-text-container">
         {/* Vertical Text */}
         <div className="text-container">
-          <p className="text-minimal-mobile">{textDown}</p>
+          <p className="text-minimal-mobile left">{textDown}</p>
         </div>
         {/* Image */}
         <div className="img-container">

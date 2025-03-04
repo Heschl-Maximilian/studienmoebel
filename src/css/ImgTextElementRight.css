@@ -8,6 +8,7 @@
     height: 100vh; /* Ensure the container takes full viewport height */
     margin-bottom: 5rem;
     margin-top: 5rem;
+
   }
 
   /* Image styling: 100vh height, 60% width */
@@ -17,10 +18,10 @@
   }
 
   .img-container img {
-    margin-left: 2rem;
     width: 100%; /* Ensure the image takes up full width of the container */
     height: 100%; /* Ensure the image takes up full height of the container */
     object-fit: cover; /* Ensures the image scales correctly */
+    margin-right: 1rem !important;
   }
 
   /* Vertical text styling */
@@ -44,17 +45,35 @@
     letter-spacing: 2rem;
     font-weight: 100 !important;
     font-size: 8rem;
+    margin-left: 4rem;
+  }
+  .text-fancy-mobile.link{
+    margin-bottom: 30rem;
+  }
+  .text-fancy-mobile.right{
+    margin-bottom: 33rem;
+  }
+  .text-fancy-mobile.left{
+    margin-bottom: 18rem;
   }
   .text-minimal-mobile{
     font-family: 'Funnel Sans';
     transform: scaleY(3); 
     transform: scaleX(1.1); 
     transform: rotate(180deg);
-   
     letter-spacing: 2rem;
     font-weight: 100 !important;
     font-size: 5rem;
-
+    margin-left: 8rem;
+  }
+  .text-minimal-mobile.link{
+    margin-bottom: -35rem;
+  }
+  .text-minimal-mobile.right{
+    margin-bottom: -24rem;
+  }
+  .text-minimal-mobile.left{
+    margin-bottom: -30rem;
   }
 }
 

@@ -12,23 +12,20 @@ const ImgElementRightMobileLink = ({ imgSrcUp, textUp, imgSrcDown, textDown, onR
 
         {/* Vertical Text */}
         <div className="text-container">
-          <p className="text-fancy-mobile">{textUp}</p>
+          <p className="text-fancy-mobile link">{textUp}</p>
         </div>
       </div>
       <div className="img-text-container">
         {/* Vertical Text */}
         <div className="text-container">
-          <p className="text-minimal-mobile">{textDown}</p>
+          <p className="text-minimal-mobile link">{textDown}</p>
         </div>
         {/* Image */}
         <div className="img-container">
-          <img src={imgSrcDown} alt="Image" onClick={onRightImageClick} style={{ cursor: "pointer" }} />
+          <img src={imgSrcDown} onClick={onRightImageClick} style={{ cursor: "pointer" }} />
         </div>
       </div>
-    </div>
-
-    
+    </div>    
   );
 };
-
 export default ImgElementRightMobileLink;
